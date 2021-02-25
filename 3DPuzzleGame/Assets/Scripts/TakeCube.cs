@@ -20,7 +20,7 @@ public class TakeCube : MonoBehaviour
     {
         Debug.Log("touch");
         if (other.gameObject.tag == "Player")
-        {s
+        {
             player = other;
         }
     }
