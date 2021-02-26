@@ -16,6 +16,7 @@ public class TakeCube : MonoBehaviour
     {
         
     }
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("touch");
