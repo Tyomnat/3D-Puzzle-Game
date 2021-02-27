@@ -5,7 +5,8 @@ using UnityEngine;
 public class TakeCube : MonoBehaviour
 {
     public KeyCode key;
-    Collider player = null;
+    public Transform destination = null;
+    public GameObject player = null;
     bool taken = false;
     
     // Start is called before the first frame update
@@ -17,48 +18,36 @@ public class TakeCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(key) && player != null)
+        if (Input.GetKey(key))
         {
-            if (taken)
-            {
-                ReleaseCube();
-            } 
-            else
-            {
-                HoldCube();
-            }
-            taken = !taken;
-        }        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("touch");
-        if (other.gameObject.tag == "Player")
-        {
-            player = other;
+            taken = true;
         }
-        HoldCube();
+        else
+        {
+            taken = false;
+        }
     }
 
-    private void OnMouseDown()
+    private void FixedUpdate()
     {
-        
+        if (taken)
+        {
+            HoldCube();
+        }
+        else
+        {
+            ReleaseCube();
+        }
     }
 
-    private void OnMouseUp()
-    {
-        
-    }
-
-    void HoldCube()
-    {
+    private void HoldCube()
+    {        
         GetComponent<Rigidbody>().useGravity = false;
-        this.transform.position = player.gameObject.transform.position;
-        this.transform.parent = player.gameObject.transform;
+        this.transform.position = destination.position;
+        this.transform.parent = player.transform;
     }
 
-    void ReleaseCube()
+    private void ReleaseCube()
     {
         this.transform.parent = null;
         GetComponent<Rigidbody>().useGravity = true;

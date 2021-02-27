@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BridgeRespawn : MonoBehaviour
 {
-    public GameObject respawnPoint;
+    public Transform respawnPoint;
     public GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -20,9 +20,21 @@ public class BridgeRespawn : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log(other.gameObject.name);
         if (other.gameObject == player)
         {
-            player.gameObject.transform.position = respawnPoint.gameObject.transform.position;
+            Debug.Log(other.gameObject.name);
+            other.transform.position = respawnPoint.position;
+            //player.transform.position = respawnPoint.position;
         }
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Debug.Log("Collided onCollision");
+    //    if (collision.gameObject == player)
+    //    {
+    //        player.transform.position = respawnPoint.position;
+    //    }
+    //}
 }
