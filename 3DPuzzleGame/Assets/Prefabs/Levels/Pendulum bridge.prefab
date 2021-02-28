@@ -157,40 +157,9 @@ Transform:
   m_Children:
   - {fileID: 1783168056778766661}
   - {fileID: 1783168055221067381}
-  - {fileID: 1783168056617226776}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &1783168056617226779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1783168056617226776}
-  m_Layer: 0
-  m_Name: RespawnPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1783168056617226776
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783168056617226779}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.11, y: 3.62, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1783168056220873922}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1783168056778766660
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +396,7 @@ PrefabInstance:
         type: 3}
       propertyPath: respawnPoint
       value: 
-      objectReference: {fileID: 1783168056617226776}
+      objectReference: {fileID: 0}
     - target: {fileID: 8147833911998801738, guid: 879230551e5d35c47a1d5c18b7e12ed9,
         type: 3}
       propertyPath: m_Name
@@ -817,7 +786,7 @@ PrefabInstance:
         type: 3}
       propertyPath: respawnPoint
       value: 
-      objectReference: {fileID: 1783168056617226776}
+      objectReference: {fileID: 0}
     - target: {fileID: 8147833911519151240, guid: 879230551e5d35c47a1d5c18b7e12ed9,
         type: 3}
       propertyPath: _angle
@@ -912,7 +881,7 @@ PrefabInstance:
         type: 3}
       propertyPath: respawnPoint
       value: 
-      objectReference: {fileID: 1783168056617226776}
+      objectReference: {fileID: 0}
     - target: {fileID: 8147833911519151240, guid: 879230551e5d35c47a1d5c18b7e12ed9,
         type: 3}
       propertyPath: _angle
@@ -1012,7 +981,7 @@ PrefabInstance:
         type: 3}
       propertyPath: respawnPoint
       value: 
-      objectReference: {fileID: 1783168056617226776}
+      objectReference: {fileID: 0}
     - target: {fileID: 8147833911519151240, guid: 879230551e5d35c47a1d5c18b7e12ed9,
         type: 3}
       propertyPath: _angle
@@ -1187,7 +1156,7 @@ PrefabInstance:
         type: 3}
       propertyPath: respawnPoint
       value: 
-      objectReference: {fileID: 1783168056617226776}
+      objectReference: {fileID: 0}
     - target: {fileID: 7659332892876504113, guid: 879230551e5d35c47a1d5c18b7e12ed9,
         type: 3}
       propertyPath: player
@@ -1197,7 +1166,7 @@ PrefabInstance:
         type: 3}
       propertyPath: respawnPoint
       value: 
-      objectReference: {fileID: 1783168056617226776}
+      objectReference: {fileID: 0}
     - target: {fileID: 8147833911519151240, guid: 879230551e5d35c47a1d5c18b7e12ed9,
         type: 3}
       propertyPath: _angle

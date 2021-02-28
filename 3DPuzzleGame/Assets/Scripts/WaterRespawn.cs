@@ -12,29 +12,23 @@ public class WaterRespawn : MonoBehaviour
         //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag=="LevelCount")
         {
-            Debug.Log("Respawn set");
+            //Debug.Log("Respawn set");
             respawnPoint = collision.gameObject.transform.position;
         }   
         if (collision.gameObject.tag=="Water")
         {
             GetComponent<PlayerControls>().enabled = false;
             Debug.Log("water");
-            Debug.Log(this.transform.position.ToString() + " " + respawnPoint.ToString());
+            //Debug.Log(this.transform.position.ToString() + " " + respawnPoint.ToString());
             this.transform.position = respawnPoint;
             respawned = true;
         }        
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("on enter");
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        respawnPoint = this.transform.position;
-        
+        respawnPoint = this.transform.position;        
     }    
 
     // Update is called once per frame

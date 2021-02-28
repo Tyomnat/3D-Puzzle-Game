@@ -5,7 +5,9 @@ using UnityEngine;
 public class BridgeRespawn : MonoBehaviour
 {
     public Transform respawnPoint;
-    public GameObject player;
+    bool respawned = false;
+    GameObject player = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,26 +17,29 @@ public class BridgeRespawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        StartCoroutine(CoUpdate());
+    }
+
+    IEnumerator CoUpdate()
+    {
+        if (respawned)
+        {
+            yield return new WaitForSeconds(1);
+            player.GetComponent<PlayerControls>().enabled = true;
+            respawned = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other.gameObject.name);
-        if (other.gameObject == player)
+        if (other.gameObject.tag == "Player")
         {
+            player = other.gameObject;
             Debug.Log(other.gameObject.name);
-            other.transform.position = respawnPoint.position;
-            //player.transform.position = respawnPoint.position;
+            other.GetComponent<PlayerControls>().enabled = false;
+            other.transform.position = respawnPoint.position;            
+            respawned = true;
         }
     }
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log("Collided onCollision");
-    //    if (collision.gameObject == player)
-    //    {
-    //        player.transform.position = respawnPoint.position;
-    //    }
-    //}
 }
