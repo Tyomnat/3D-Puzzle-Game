@@ -8,8 +8,9 @@ public class TakeCube : MonoBehaviour
     public Transform destination = null;
     public GameObject player = null;
     bool taken = false;
-    static bool isColliding = false;
-    
+    bool isColliding = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,28 +28,43 @@ public class TakeCube : MonoBehaviour
         {
             taken = false;
         }
+
+        if (this.gameObject.GetComponent<Collider>().bounds.Contains(destination.position))
+        {
+            isColliding = true;
+        }
+        else
+        {
+            isColliding = false;
+        }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("exit");
-        isColliding = false;
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    Debug.Log("exit");
+    //    isColliding = false;
+    //}
 
     private void OnCollisionExit(Collision collision)
     {
-        
+        if (collision.gameObject.tag == "Player")
+        {
+            //Debug.Log("exit");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
-    {        
-        isColliding = true;
-    }
-    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("enter");
-        isColliding = true;
+        if (collision.gameObject.tag=="Player")
+        {
+            //Debug.Log("enter");
+        }        
     }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    Debug.Log("enter");
+    //    isColliding = true;
+    //}
 
     private void FixedUpdate()
     {
