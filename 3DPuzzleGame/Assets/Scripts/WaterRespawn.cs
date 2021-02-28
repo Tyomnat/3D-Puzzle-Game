@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaterRespawn : MonoBehaviour
 {
     static Vector3 respawnPoint;
-    
+    bool respawned = false;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -21,7 +21,7 @@ public class WaterRespawn : MonoBehaviour
             Debug.Log("water");
             Debug.Log(this.transform.position.ToString() + " " + respawnPoint.ToString());
             this.transform.position = respawnPoint;
-            //GetComponent<PlayerControls>().enabled = true;
+            respawned = true;
         }        
     }
 
@@ -34,11 +34,23 @@ public class WaterRespawn : MonoBehaviour
     void Start()
     {
         respawnPoint = this.transform.position;
+        
     }    
 
     // Update is called once per frame
     void Update()
     {
+        StartCoroutine(CoUpdate());
+    }
 
+    IEnumerator CoUpdate()
+    {
+        if (respawned)
+        {
+            yield return new WaitForSeconds(1);
+            GetComponent<PlayerControls>().enabled = true;
+            Debug.Log("enabled");
+            respawned = false;
+        }
     }
 }
