@@ -25,7 +25,6 @@ public class UI : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("collided");
             Destroy(this.gameObject);
             score++;
             uiText.GetComponent<Text>().text = "Level: " + score;
