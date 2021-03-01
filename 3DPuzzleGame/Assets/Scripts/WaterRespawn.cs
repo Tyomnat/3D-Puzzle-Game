@@ -19,7 +19,6 @@ public class WaterRespawn : MonoBehaviour
         {
             GetComponent<PlayerControls>().enabled = false;
             Debug.Log("water");
-            //Debug.Log(this.transform.position.ToString() + " " + respawnPoint.ToString());
             this.transform.position = respawnPoint;
             respawned = true;
         }        
