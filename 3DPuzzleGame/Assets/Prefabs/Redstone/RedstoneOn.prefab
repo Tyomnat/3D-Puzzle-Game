@@ -91,7 +91,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 7085544504705357605}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2408d49a45a184a8850e2258c55aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultState: 0
+  state: 0
   offMaterial: {fileID: 2100000, guid: c481c3a5ef793b54a945a2bda509496d, type: 2}
   onMaterial: {fileID: 2100000, guid: 13e788b4d7a98fc4f821a870382fa8af, type: 2}
 --- !u!1 &7085544504946107069

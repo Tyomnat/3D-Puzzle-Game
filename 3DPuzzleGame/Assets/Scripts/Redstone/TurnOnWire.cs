@@ -6,7 +6,7 @@ public class TurnOnWire : MonoBehaviour
 {
     public GameObject lever;
     TurnOffRedstone[] offRedStoneScripts;
-    bool oneTime = true;
+    bool updated = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,18 +19,18 @@ public class TurnOnWire : MonoBehaviour
         //Debug.Log(lever.GetComponent<PullLever>().IsPulled());
         if (lever.GetComponent<PullLever>().IsPulled())
         {
-            if (oneTime)
+            if (updated)
             {
                 SwitchState(true);
-                oneTime = false;
+                updated = false;
             }
         }
         else
         {
-            if (!oneTime)
+            if (!updated)
             {
                 SwitchState(false);
-                oneTime = true;
+                updated = true;
             }
         }
     }
