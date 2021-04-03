@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7085544504705357601}
   - component: {fileID: 7085544504705357606}
   - component: {fileID: 7085544504705357607}
+  - component: {fileID: 6962479685658727877}
   m_Layer: 0
   m_Name: RedstoneOn
   m_TagString: Untagged
@@ -95,6 +96,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6962479685658727877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7085544504705357605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb2408d49a45a184a8850e2258c55aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultState: 0
+  offMaterial: {fileID: 2100000, guid: c481c3a5ef793b54a945a2bda509496d, type: 2}
+  onMaterial: {fileID: 2100000, guid: 13e788b4d7a98fc4f821a870382fa8af, type: 2}
 --- !u!1 &7085544504946107069
 GameObject:
   m_ObjectHideFlags: 0

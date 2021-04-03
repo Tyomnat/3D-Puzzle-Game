@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class TurnOffRedstone : MonoBehaviour
 {
-    public bool defaultState = false;
+    public bool state = false;
     public Material offMaterial;
+    public Material onMaterial;
+    ParticleSystem ps;
+    Material currentMaterial;
     // Start is called before the first frame update
     void Start()
     {
-        if (!defaultState)
+        currentMaterial = GetComponent<Renderer>().material;
+        ps = GetComponentInChildren<ParticleSystem>();
+
+        if (state)
+        {
+            GetComponent<Renderer>().material = onMaterial;
+            ps.Play();
+        }
+        else
         {
             GetComponent<Renderer>().material = offMaterial;
-            var ps = GetComponentInChildren<ParticleSystem>();
             ps.Stop();
-        }             
+        }
     }
 
     // Update is called once per frame

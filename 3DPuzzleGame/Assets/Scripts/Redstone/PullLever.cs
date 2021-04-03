@@ -6,8 +6,7 @@ public class PullLever : MonoBehaviour
 {
     Animator animator;
     bool isPulled = false;
-
-    public KeyCode key;
+    public KeyCode key = KeyCode.F;
     public Transform playerTouch = null;
     public GameObject leverCollider = null;
     bool isColliding = false;
@@ -40,5 +39,10 @@ public class PullLever : MonoBehaviour
     {
         isPulled = !isPulled;
         animator.SetBool("open", isPulled);
+    }
+
+    public bool IsPulled()
+    {
+        return isPulled;
     }
 }
