@@ -37,7 +37,6 @@ public class TurnOnWire : MonoBehaviour
 
     void SwitchState(bool state)
     {
-        Debug.Log(state);
         foreach (var script in offRedStoneScripts)
         {
             script.state = state;
