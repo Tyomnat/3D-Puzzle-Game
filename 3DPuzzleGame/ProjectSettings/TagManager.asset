@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LevelCount
   - Water
+  - Light
   layers:
   - Default
   - TransparentFX
