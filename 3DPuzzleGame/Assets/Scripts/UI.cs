@@ -12,7 +12,7 @@ public class UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponentInChildren<ParticleSystem>().Stop();
     }
 
     // Update is called once per frame
@@ -25,7 +25,11 @@ public class UI : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(this.gameObject);
+            GetComponentInChildren<ParticleSystem>().Play();
+            GetComponentInChildren<AudioSource>().Play();
+            //Destroy(this.gameObject);
+            GetComponent<Renderer>().enabled = false;
+            GetComponent<Collider>().enabled = false;
             score++;
             uiText.GetComponent<Text>().text = "Level: " + score;
         }
