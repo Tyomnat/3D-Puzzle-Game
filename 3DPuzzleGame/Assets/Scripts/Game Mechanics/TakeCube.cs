@@ -81,6 +81,7 @@ public class TakeCube : MonoBehaviour
     private void HoldCube()
     {        
         GetComponent<Rigidbody>().useGravity = false;
+        GetComponent<Rigidbody>().freezeRotation = true;
         this.transform.position = destination.position;
         this.transform.parent = player.transform;
     }
@@ -89,5 +90,6 @@ public class TakeCube : MonoBehaviour
     {
         this.transform.parent = null;
         GetComponent<Rigidbody>().useGravity = true;
+        GetComponent<Rigidbody>().freezeRotation = false;
     }
 }
