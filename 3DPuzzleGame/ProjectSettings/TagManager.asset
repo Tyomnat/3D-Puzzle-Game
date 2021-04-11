@@ -8,6 +8,7 @@ TagManager:
   - Water
   - Light
   - Object
+  - Snow
   layers:
   - Default
   - TransparentFX

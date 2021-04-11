@@ -39,33 +39,6 @@ public class TakeCube : MonoBehaviour
         }
     }
 
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    Debug.Log("exit");
-    //    isColliding = false;
-    //}
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            //Debug.Log("exit");
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag=="Player")
-        {
-            //Debug.Log("enter");
-        }        
-    }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    Debug.Log("enter");
-    //    isColliding = true;
-    //}
-
     private void FixedUpdate()
     {
         if (taken && isColliding)
