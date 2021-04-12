@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
+    //Points
+    public Rigidbody[] ragdollPoints;
+    public Collider[] collidePoints;
+    public GameObject skeleton;
+
     //Inputs
     public Controls controls;
     Vector2 inputs, inputNormalized;
@@ -42,13 +47,39 @@ public class PlayerControls : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        DisableRagdoll();
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetInputs();
-        Locomotion();
+        if (ragdollPoints[0].isKinematic == true)
+        {
+            GetInputs();
+            Locomotion();
+        }
+        else
+        {
+            
+        }
+    }
+
+    public void DisableRagdoll()
+    {
+        skeleton = controller.gameObject.transform.GetChild(2).gameObject;
+        ragdollPoints = skeleton.GetComponentsInChildren<Rigidbody>();
+        collidePoints = skeleton.GetComponentsInChildren<Collider>();
+        controller.gameObject.GetComponent<Animator>().enabled = true;
+        controller.gameObject.GetComponent<CharacterController>().enabled = true;
+        controller.gameObject.transform.GetChild(5).gameObject.GetComponent<Collider>().enabled = true;
+        foreach (Rigidbody ragdoll in ragdollPoints)
+        {
+            ragdoll.isKinematic = true;
+            ragdoll.detectCollisions = false;
+        }
+
+        foreach (Collider collider in collidePoints)
+            collider.enabled = false;
     }
 
     void Locomotion()

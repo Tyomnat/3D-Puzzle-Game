@@ -24,7 +24,7 @@ public class BridgeRespawn : MonoBehaviour
     {
         if (respawned)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
             player.GetComponent<PlayerControls>().enabled = true;
             respawned = false;
         }
