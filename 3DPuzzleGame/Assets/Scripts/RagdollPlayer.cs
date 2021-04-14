@@ -48,13 +48,12 @@ public class RagdollPlayer : MonoBehaviour
             {
                 ragdoll.isKinematic = false;
                 ragdoll.detectCollisions = true;
-                ragdoll.AddForce(new Vector3(10000, 1000, 1000));
             }
 
             foreach (Collider collider in collidePoints)
                 collider.enabled = true;
 
-            player.GetComponent<Rigidbody>().AddForce(new Vector3(10000, 1000, 1000));
+            //player.GetComponent<Rigidbody>().velocity = new Vector3(100, 0, 0);
         }
     }
 }
