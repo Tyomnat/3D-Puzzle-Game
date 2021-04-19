@@ -21,7 +21,7 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (score == 3 && !ballsSpawned)
+        if (score == 1 && !ballsSpawned)
         {
             ballSpawn.SpawningBall();
             ballsSpawned = true;
