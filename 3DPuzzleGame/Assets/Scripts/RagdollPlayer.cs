@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RagdollPlayer : MonoBehaviour
 {
+    public GameObject pendulum;
     public GameObject player;
     public Transform respawnPosition;
     GameObject skeleton;
@@ -11,6 +12,8 @@ public class RagdollPlayer : MonoBehaviour
     Collider[] collidePoints;
     bool collided = false;
     bool right = true;
+
+    public int collideCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -27,15 +30,26 @@ public class RagdollPlayer : MonoBehaviour
             player.GetComponent<PlayerControls>().enabled = true;            
             player.GetComponent<PlayerControls>().DisableRagdoll();
             collided = false;
+            if (collideCount == 5)
+            {
+                Debug.Log("Destroying");
+                Destroy(pendulum);
+            }
+            else
+            {
+                Debug.Log(collideCount);
+            }
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         StartCoroutine(CoUpdate());
         if (this.gameObject.GetComponent<Collider>().bounds.Intersects(player.transform.GetComponent<Collider>().bounds))
         {
+            collideCount++;
             collided = true;
             skeleton = player.gameObject.transform.GetChild(2).gameObject;
             ragdollPoints = skeleton.GetComponentsInChildren<Rigidbody>();
