@@ -9,6 +9,8 @@ public class EnterVehicle : MonoBehaviour
     CarUserControl vehicleScript;
     public GameObject guiObj;
     GameObject player;
+    GameObject inactiveSled;
+    GameObject activeSled;
 
 
     void Start()
@@ -16,20 +18,28 @@ public class EnterVehicle : MonoBehaviour
         vehicleScript = GetComponent<CarUserControl>();
         player = GameObject.FindWithTag("Player");
         guiObj.SetActive(false);
+        inactiveSled = gameObject.transform.GetChild(0).gameObject;
+        activeSled = gameObject.transform.GetChild(1).gameObject;
+        activeSled.SetActive(false);
+        inactiveSled.SetActive(true);
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && inVehicle == false)
+        if (other.gameObject.name == "Player" && inVehicle == false)
         {
             guiObj.SetActive(true);
             if (Input.GetKey(KeyCode.F))
             {
                 guiObj.SetActive(false);
-                player.transform.parent = gameObject.transform;
-                vehicleScript.enabled = true;
-                player.SetActive(false);
-                inVehicle = true;
+                activeSled.SetActive(true);
+                inactiveSled.SetActive(false);
+                //player.transform.parent = gameObject.transform;
+                //vehicleScript.enabled = true;
+                //player.SetActive(false);
+                //inVehicle = true;
+                other.gameObject.SetActive(false);
+                other.gameObject.transform.parent.GetChild(0).gameObject.SetActive(false);
             }
         }
     }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    bool cameraChange = false;
+
     //Input Variables
     KeyCode leftMouse = KeyCode.Mouse0, rightMouse = KeyCode.Mouse1;
 
@@ -25,6 +27,12 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerControls>();
+        if (player.name == "Player")
+            cameraSetup(player);
+    }
+
+    void cameraSetup(PlayerControls player)
+    {
         player.mainCam = this;
         mainCam = Camera.main;
 
@@ -34,8 +42,25 @@ public class CameraController : MonoBehaviour
         tilt.eulerAngles = new Vector3(currentTilt, transform.eulerAngles.y, transform.eulerAngles.z);
         mainCam.transform.position += tilt.forward * -currentDistance;
     }
+
     void Update()
     {
+        if (cameraChange)
+        {
+            Debug.Log("WE HERE1");
+            PlayerControls[] players = FindObjectsOfType<PlayerControls>();
+            foreach (PlayerControls pc in players)
+            {
+                Debug.Log("WE HERE2");
+                if (pc.gameObject.name == "PlayerInSled")
+                {
+                    Debug.Log("WE HERE3");
+                    player = pc;
+                    cameraSetup(player);
+                    break;
+                }
+            }
+        }
         if (!Input.GetKey(leftMouse) && !Input.GetKey(rightMouse)) // if no mouse button is pressed
             cameraState = CameraState.CameraNone;
         else if (Input.GetKey(leftMouse) && !Input.GetKey(rightMouse)) // if left mouse button is pressed

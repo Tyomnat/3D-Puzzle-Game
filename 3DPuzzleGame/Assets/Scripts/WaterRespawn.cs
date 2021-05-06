@@ -10,7 +10,7 @@ public class WaterRespawn : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag=="LevelCount")
         {
             //Debug.Log("Respawn set");
@@ -20,7 +20,7 @@ public class WaterRespawn : MonoBehaviour
         {
             deathsound.GetComponent<SoundEffect>().PlaySound();
             GetComponentInParent<PlayerControls>().enabled = false;
-            Debug.Log("water");
+            //Debug.Log("water");
             this.transform.position = respawnPoint;
             respawned = true;
         }
@@ -44,7 +44,7 @@ public class WaterRespawn : MonoBehaviour
         {            
             yield return new WaitForSeconds(1);
             GetComponent<PlayerControls>().enabled = true;
-            Debug.Log("enabled");
+            //Debug.Log("enabled");
             respawned = false;
         }
     }
