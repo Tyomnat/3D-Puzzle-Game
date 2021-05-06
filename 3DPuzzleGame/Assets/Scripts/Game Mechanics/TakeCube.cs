@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TakeCube : MonoBehaviour
 {
+    public GameObject soundEffect;
     public KeyCode key;
     public Transform destination = null;
     public GameObject player = null;
@@ -43,6 +44,7 @@ public class TakeCube : MonoBehaviour
     {
         if (taken && isColliding)
         {
+            soundEffect.GetComponent<AudioSource>().Play();
             HoldCube();
         }
         else

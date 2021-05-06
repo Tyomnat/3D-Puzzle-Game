@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RagdollPlayer : MonoBehaviour
 {
+    public GameObject soundEffect;
     public GameObject pendulum;
     public GameObject player;
     public Transform respawnPosition;
@@ -24,6 +25,7 @@ public class RagdollPlayer : MonoBehaviour
     {
         if (collided)
         {
+            soundEffect.GetComponent<SoundEffect>().PlaySound();
             yield return new WaitForSeconds(1);
             player.transform.position = respawnPosition.transform.position;
             player.GetComponent<PlayerControls>().enabled = true;            
@@ -59,8 +61,6 @@ public class RagdollPlayer : MonoBehaviour
 
             foreach (Collider collider in collidePoints)
                 collider.enabled = true;
-
-            //player.GetComponent<Rigidbody>().velocity = new Vector3(100, 0, 0);
         }
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class BridgeDrop : MonoBehaviour
 {
     [SerializeField]
+    GameObject soundEffect;
+    [SerializeField]
     GameObject box;
     [SerializeField]
     GameObject holder1;
@@ -16,6 +18,8 @@ public class BridgeDrop : MonoBehaviour
     GameObject greenCylinder;
     [SerializeField]
     GameObject fallingBridge;
+
+    int fallCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +39,11 @@ public class BridgeDrop : MonoBehaviour
     {
         if (other.gameObject == box)
         {
+            fallCount++;
+            if (fallCount < 2)
+            {
+                soundEffect.GetComponent<AudioSource>().Play();
+            }            
             redCylinder.GetComponent<Renderer>().enabled = false;
             greenCylinder.GetComponent<Renderer>().enabled = true;
             fallingBridge.GetComponent<Renderer>().enabled = true;

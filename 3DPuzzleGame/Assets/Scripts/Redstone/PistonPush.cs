@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class PistonPush : MonoBehaviour
 {
+    public GameObject soundEffect;
     public GameObject redstone;
     Animator animator;
     bool state = false;
     bool lastState = false;
+
+    bool used = false;
+    bool played = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +26,16 @@ public class PistonPush : MonoBehaviour
         {
             lastState = state;
             GetComponent<Animator>().SetBool("extend", state);
+            used = true;
+        }        
+    }
+
+    private void FixedUpdate()
+    {
+        if (used && !played)
+        {
+            played = true;
+            soundEffect.GetComponent<SoundEffect>().PlaySound();
         }
     }
 }
