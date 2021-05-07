@@ -12,6 +12,9 @@ public class EnterVehicle : MonoBehaviour
     GameObject inactiveSled;
     GameObject activeSled;
 
+    public GameObject walkingSound;
+    bool walkingSoundOn = true;
+
 
     void Start()
     {
@@ -41,6 +44,17 @@ public class EnterVehicle : MonoBehaviour
                 other.gameObject.SetActive(false);
                 other.gameObject.transform.parent.GetChild(0).gameObject.SetActive(false);
             }
+            if (walkingSoundOn)
+            {
+                walkingSound.GetComponent<WalkingSound>().enabled = false;
+                walkingSound.GetComponent<AudioSource>().Stop();
+                walkingSoundOn = false;
+            }
+        }
+        else if (!walkingSound)
+        {
+            walkingSound.GetComponent<WalkingSound>().enabled = true;
+            walkingSoundOn = true;
         }
     }
     void OnTriggerExit(Collider other)
