@@ -9,6 +9,8 @@ TagManager:
   - Light
   - Object
   - Snow
+  - SoundEffects
+  - PartySound
   layers:
   - Default
   - TransparentFX
