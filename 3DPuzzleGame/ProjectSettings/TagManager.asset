@@ -12,6 +12,7 @@ TagManager:
   - SoundEffects
   - PartySound
   - PostProcessing
+  - Obstacle
   layers:
   - Default
   - TransparentFX

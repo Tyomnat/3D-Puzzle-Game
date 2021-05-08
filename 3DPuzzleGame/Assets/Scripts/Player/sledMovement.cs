@@ -5,28 +5,57 @@ public class sledMovement : MonoBehaviour
     Vector3 moveVector = Vector3.zero;
     CharacterController characterController;
 
-    public float moveSpeed = 0.01f;
+    public float moveSpeed = 1f;
     public float gravity = 9.8f;
 
     private int rotationSpeed = 5;
-    public bool grounded;
+    bool grounded;
     private Vector3 posCur;
     private Quaternion rotCur;
+    private Vector3 startPos;
+    private Quaternion startRotation;
+    bool respawn = false;
 
     // Start is called before the first frame update
     private void Start()
     {
+        startPos = transform.position;
+        startRotation = transform.rotation;
+        startPos.z -= 1;
+        startPos.y += 0.5f;
         characterController = GetComponent<CharacterController>();
+        moveVector.z = 2;
     }
 
     // Update is called once per frame
     void Update()
     {
         GetAlignment();
-        moveVector.x = Input.GetAxis("Horizontal") * moveSpeed;
-        moveVector.y -= gravity * Time.deltaTime;
-        moveVector.z = Input.GetAxis("Vertical") * moveSpeed;
-        characterController.Move(moveVector * Time.deltaTime);
+        if (!respawn)
+        {
+            moveVector.x = Input.GetAxis("Horizontal") * moveSpeed;
+            moveVector.y -= gravity * Time.deltaTime;
+            moveVector.z += 0.025f;
+            characterController.Move(moveVector * Time.deltaTime);
+        }
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.transform.tag == "Obstacle")
+        {
+            respawn = true;
+            moveVector.z = 0;
+            transform.position = startPos;
+            transform.rotation = startRotation;
+            Invoke("startMovement", 1);
+        }
+    }
+
+    private void startMovement()
+    {
+        respawn = false;
+        moveVector.z = 2;
     }
 
     void GetAlignment()
@@ -56,17 +85,8 @@ public class sledMovement : MonoBehaviour
 
         if (grounded == true)
         {
-            //smoothly rotate and move the objects until it's aligned to the surface. The "5" multiplier controls how fast the changes occur and could be made into a seperate exposed variable
             transform.position = Vector3.Lerp(transform.position, posCur, Time.deltaTime * rotationSpeed);
             transform.rotation = Quaternion.Lerp(transform.rotation, rotCur, Time.deltaTime * rotationSpeed);
-        }
-        else
-        {
-            //if we are not grounded, make the object go straight down in world space (simulating gravity). the "1f" multiplier controls how fast we descend.
-            transform.position = Vector3.Lerp(transform.position, transform.position - Vector3.up * 1f, Time.deltaTime * rotationSpeed);
-            //if we are not grounded, make the vehicle's rotation "even out". Not completey reaslistic, but easy to work with.
-            rotCur.eulerAngles = Vector3.zero;
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotCur, Time.deltaTime);
         }
     }
 }

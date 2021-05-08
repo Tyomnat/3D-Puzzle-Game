@@ -9077,6 +9077,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -9087,6 +9092,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1961944048}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -9231,6 +9246,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -9241,6 +9261,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1210346515}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -9330,6 +9360,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -9340,6 +9375,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 832242486}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -10920,7 +10965,7 @@ GameObject:
   - component: {fileID: 180585811}
   m_Layer: 0
   m_Name: Obstacles
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11260,6 +11305,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -11270,6 +11320,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 840077958}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -12167,6 +12227,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -12177,6 +12242,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 112763872}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -12340,6 +12415,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -12350,6 +12430,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1409868779}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -14145,20 +14235,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   gravity: 9.8
-  grounded: 0
---- !u!65 &580706612
-BoxCollider:
+--- !u!54 &580706612
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580706609}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0584881, y: 1.4592218, z: 2.0896912}
-  m_Center: {x: 0.35654187, y: 0.072310686, z: -1.78508}
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!143 &580706613
 CharacterController:
   m_ObjectHideFlags: 0
@@ -14172,7 +14264,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 10
+  m_SlopeLimit: 1
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -24938,6 +25030,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -24948,6 +25045,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 609300756}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -26791,6 +26898,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -26801,6 +26913,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2019185532}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -26890,6 +27012,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -26900,6 +27027,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 228439256}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -28222,6 +28359,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -28232,6 +28374,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 472669674}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -28345,6 +28497,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -28355,6 +28512,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1714523545}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -33428,6 +33595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -33438,6 +33610,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1941232236}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -35465,6 +35647,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -35475,6 +35662,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2059209308}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -39885,6 +40082,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -39895,6 +40097,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2011690832}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -41020,6 +41232,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -41030,6 +41247,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 853932684}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -41325,6 +41552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -41335,6 +41567,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 911944262}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -49408,6 +49650,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CylinderObstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484668, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484670, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
@@ -49418,6 +49665,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 600785641}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976727920112484671, guid: f7f6a4e90bd32764dac84064b7871cd3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6976727920112484672, guid: f7f6a4e90bd32764dac84064b7871cd3,
         type: 3}
       propertyPath: m_Mesh
