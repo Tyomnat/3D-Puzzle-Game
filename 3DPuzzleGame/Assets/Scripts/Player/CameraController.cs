@@ -92,7 +92,7 @@ public class CameraController : MonoBehaviour
                     player.steer = true;
             }
 
-            currentTilt -= Input.GetAxis("Mouse Y")* cameraSpeed;
+            currentTilt -= Input.GetAxis("Mouse Y") * cameraSpeed;
             currentTilt = Mathf.Clamp(currentTilt, -cameraMaxTilt, cameraMaxTilt);
         }
         else

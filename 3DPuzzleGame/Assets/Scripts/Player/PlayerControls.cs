@@ -60,7 +60,7 @@ public class PlayerControls : MonoBehaviour
         }
         else
         {
-            
+
         }
     }
 
@@ -101,7 +101,7 @@ public class PlayerControls : MonoBehaviour
                     currentSpeed = currentSpeed / 2;
             }
         }
-        else if(!controller.isGrounded || slopeAngle > controller.slopeLimit)
+        else if (!controller.isGrounded || slopeAngle > controller.slopeLimit)
         {
             inputNormalized = Vector2.Lerp(inputNormalized, Vector2.zero, 0.025f);
             currentSpeed = Mathf.Lerp(currentSpeed, 0, 0.025f);
@@ -116,7 +116,7 @@ public class PlayerControls : MonoBehaviour
             Jump();
 
         //Apply gravity
-        if(!controller.isGrounded && velocityY > terminalVelocity)
+        if (!controller.isGrounded && velocityY > terminalVelocity)
             velocityY += gravity * Time.deltaTime;
         else if (controller.isGrounded && slopeAngle > controller.slopeLimit)
             velocityY = Mathf.Lerp(velocityY, terminalVelocity, 0.15f);
@@ -169,7 +169,7 @@ public class PlayerControls : MonoBehaviour
             slopeAngle = Vector3.Angle(transform.up, groundHit.normal);
             forwardAngle = Vector3.Angle(groundDirection.forward, groundHit.normal) - 90;
 
-            if(forwardAngle < 0 && slopeAngle <= controller.slopeLimit)
+            if (forwardAngle < 0 && slopeAngle <= controller.slopeLimit)
             {
                 //Fixing climbing speed when climbing down slope
                 forwardMult = 1 / Mathf.Cos(forwardAngle * Mathf.Deg2Rad);
@@ -181,7 +181,7 @@ public class PlayerControls : MonoBehaviour
             {
                 float groundDistance = Vector3.Distance(groundRay.origin, groundHit.point);
 
-                if(groundDistance <= 0.1f)
+                if (groundDistance <= 0.1f)
                 {
                     fallMult = 1 / Mathf.Cos((90 - slopeAngle) * Mathf.Deg2Rad);
 
@@ -195,7 +195,7 @@ public class PlayerControls : MonoBehaviour
     void Jump()
     {
         //set Jumping to true
-        if(!jumping)
+        if (!jumping)
             jumping = true;
 
         //Calculate jump direction and speed
