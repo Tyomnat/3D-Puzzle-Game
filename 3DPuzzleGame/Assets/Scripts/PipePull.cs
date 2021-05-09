@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PipePull : MonoBehaviour
 {
+    public GameObject ui;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,12 @@ public class PipePull : MonoBehaviour
         {            
             other.transform.position = this.transform.position;
             other.GetComponent<PlayerControls>().enabled = false;
+            CallGameOver();
         }
+    }
+
+    void CallGameOver()
+    {
+        ui.SetActive(true);
     }
 }
