@@ -7,7 +7,7 @@ public class PlayerControls : MonoBehaviour
     //Inverted gravity
     GameObject character;
     public bool scene2 = false;
-    bool invertedGravity = false;
+    public bool invertedGravity = false;
 
     //Points
     public Rigidbody[] ragdollPoints;
