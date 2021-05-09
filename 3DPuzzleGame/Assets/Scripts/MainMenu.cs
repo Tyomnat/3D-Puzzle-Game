@@ -12,6 +12,12 @@ public class MainMenu : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        var g1 = GameObject.Find("BackgroundMusic");
+        var g2 = GameObject.Find("EffectsSoundVolume");
+        if (g1 != null)
+            Destroy(g1);
+        if (g2 != null)
+            Destroy(g2);
         SceneManager.LoadScene(0);
     }
 
