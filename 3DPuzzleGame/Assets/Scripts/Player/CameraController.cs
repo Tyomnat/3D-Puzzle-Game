@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    public bool invertedGravity = false;
+    bool invertedCameraHeight = false;
+
     bool cameraChange = false;
 
     //Input Variables
@@ -39,22 +42,32 @@ public class CameraController : MonoBehaviour
         transform.position = player.transform.position + Vector3.up * cameraHeight;
         transform.rotation = player.transform.rotation;
 
-        tilt.eulerAngles = new Vector3(currentTilt, transform.eulerAngles.y, transform.eulerAngles.z);
+        if (invertedGravity)
+        {
+            tilt.eulerAngles = new Vector3(-currentTilt, transform.eulerAngles.y, transform.eulerAngles.z);
+        }
+        else
+        {
+            tilt.eulerAngles = new Vector3(currentTilt, transform.eulerAngles.y, transform.eulerAngles.z);
+        }
         mainCam.transform.position += tilt.forward * -currentDistance;
     }
 
-    void Update()
+    public void InvertGravity()
     {
+        invertedGravity = !invertedGravity;
+        cameraHeight = -cameraHeight;
+    }
+
+    void Update()
+    {        
         if (cameraChange)
         {
-            Debug.Log("WE HERE1");
             PlayerControls[] players = FindObjectsOfType<PlayerControls>();
             foreach (PlayerControls pc in players)
             {
-                Debug.Log("WE HERE2");
                 if (pc.gameObject.name == "PlayerInSled")
                 {
-                    Debug.Log("WE HERE3");
                     player = pc;
                     cameraSetup(player);
                     break;
@@ -84,7 +97,8 @@ public class CameraController : MonoBehaviour
             {
                 if (player.steer)
                     player.steer = false;
-                currentPan += Input.GetAxis("Mouse X") * cameraSpeed;
+                //currentPan += invertedGravity ? -Input.GetAxis("Mouse X") * cameraSpeed : Input.GetAxis("Mouse X") * cameraSpeed;
+                currentPan -= Input.GetAxis("Mouse X") * cameraSpeed;
             }
             else if (cameraState == CameraState.CameraSteer)
             {
@@ -116,7 +130,7 @@ public class CameraController : MonoBehaviour
         }
 
         if (cameraState == CameraState.CameraNone)
-            currentTilt = 20;
+            currentTilt = invertedGravity ? -20 : 20;
 
         transform.position = player.transform.position + Vector3.up * cameraHeight;
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, currentPan, transform.eulerAngles.z);

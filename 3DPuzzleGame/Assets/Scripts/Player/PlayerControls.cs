@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
+    //Inverted gravity
+    GameObject character;
+    public bool scene2 = false;
+    bool invertedGravity = false;
+
     //Points
     public Rigidbody[] ragdollPoints;
     public Collider[] collidePoints;
@@ -16,6 +21,7 @@ public class PlayerControls : MonoBehaviour
     bool run = false, jump;
     [HideInInspector]
     public bool steer;
+    public KeyCode invertGravityKey = KeyCode.Space;
 
     //Velocity
     Vector3 velocity;
@@ -46,6 +52,7 @@ public class PlayerControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        character = transform.parent.gameObject;
         controller = GetComponent<CharacterController>();
         DisableRagdoll();
     }
@@ -53,6 +60,15 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (scene2)
+        {
+            if (Input.GetKeyDown(invertGravityKey))
+            {
+                invertedGravity = !invertedGravity;
+                mainCam.InvertGravity();
+                character.transform.eulerAngles += new Vector3(0, 0, 180);
+            }
+        }        
         if (ragdollPoints[0].isKinematic == true)
         {
             GetInputs();
@@ -87,7 +103,7 @@ public class PlayerControls : MonoBehaviour
         GroundDirection();
 
         //Running or Walking
-        if (controller.isGrounded && slopeAngle <= controller.slopeLimit)
+        if (invertedGravity || controller.isGrounded && slopeAngle <= controller.slopeLimit)
         {
             inputNormalized = inputs;
             currentSpeed = baseSpeed;
