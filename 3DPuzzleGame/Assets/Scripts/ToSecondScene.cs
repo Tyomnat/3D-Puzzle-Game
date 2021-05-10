@@ -7,12 +7,14 @@ using UnityEngine.UI;
 
 public class ToSecondScene : MonoBehaviour
 {
+    public GameObject photo;
     bool respawned = false;
     public GameObject text;
     public float time = 0;
 
     private void OnTriggerEnter(Collider other)
     {
+        photo.SetActive(true);
         text.SetActive(true);
         text.GetComponent<Text>().text = "Time in level: " + time;
         respawned = true;
