@@ -16,7 +16,7 @@ public class ToSecondScene : MonoBehaviour
     {
         photo.SetActive(true);
         text.SetActive(true);
-        text.GetComponent<Text>().text = "Time in level: " + time;
+        text.GetComponent<Text>().text = "Time in level: " + System.Math.Round(time, 2) + "s";
         respawned = true;
     }
     // Start is called before the first frame update
