@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControls : MonoBehaviour
 {
+    public Color minColor, maxColor;
+    public GameObject uiText;
+    public GameObject gravityUiImage;
+
     //Inverted gravity
     GameObject character;
     public bool scene2 = false;
@@ -64,9 +69,20 @@ public class PlayerControls : MonoBehaviour
         {
             if (Input.GetKeyDown(invertGravityKey))
             {
+                uiText.SetActive(false);
                 invertedGravity = !invertedGravity;
                 mainCam.InvertGravity();
                 character.transform.eulerAngles += new Vector3(0, 0, 180);
+            }
+            if (invertedGravity)
+            {
+                var image = gravityUiImage.GetComponent<Image>();
+                image.color = maxColor;
+            } 
+            else
+            {
+                var image = gravityUiImage.GetComponent<Image>();
+                image.color = minColor;
             }
         }        
         if (ragdollPoints[0].isKinematic == true)
