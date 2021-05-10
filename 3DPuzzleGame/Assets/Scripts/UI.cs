@@ -22,7 +22,7 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (score == 4 && !ballsSpawned)
+        if (transform.gameObject.name == "BallCoin" && !transform.gameObject.GetComponent<Collider>().enabled && !ballsSpawned)
         {
             ballSpawn.SpawningBall();
             ballsSpawned = true;

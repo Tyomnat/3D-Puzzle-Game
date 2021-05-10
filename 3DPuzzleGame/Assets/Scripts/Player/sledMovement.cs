@@ -67,8 +67,6 @@ public class sledMovement : MonoBehaviour
         //cast the ray. Note the "out hit" which makes the Raycast "fill" the hit variable with information. The maximum distance the ray will go is 1.5
         if (Physics.Raycast(ray, out hit, 1.5f) == true)
         {
-            //draw a Debug Line so we can see the ray in the scene view. Good to check if it actually does what we want. Make sure that it uses the same values as the actual Raycast. In this case, it starts at the same position, but only goes up to the point that we hit.
-            Debug.DrawLine(transform.position, hit.point, Color.green);
             //store the roation and position as they would be aligned on the surface
             rotCur = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
             posCur = new Vector3(transform.position.x, hit.point.y, transform.position.z);
